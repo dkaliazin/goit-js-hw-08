@@ -63,3 +63,11 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
+const gallery = document.querySelector(".gallery");
+const fragment = document.createDocumentFragment();
+images.forEach(image => { 
+  const li = document.createElement('.li');
+  const a = document.createElement('.a');
+  const img = document.createElement('.img');
+  
+})
