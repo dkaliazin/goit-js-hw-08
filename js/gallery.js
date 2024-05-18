@@ -66,8 +66,18 @@ const images = [
 const gallery = document.querySelector(".gallery");
 const fragment = document.createDocumentFragment();
 images.forEach(image => { 
-  const li = document.createElement('.li');
-  const a = document.createElement('.a');
-  const img = document.createElement('.img');
-  
+  const li = document.createElement('li');
+  li.className = 'gallery-item';
+  const a = document.createElement('a');
+  a.className = 'gallery-link';
+  a.href = image.original;
+  const img = document.createElement('img');
+  img.className = 'gallery-image';
+  img.src = image.preview;
+  img.setAttribute('data-source', image.original);
+  img.alt = image.description;
+  a.appendChild(img);
+  li.appendChild(a);
+  fragment.appendChild(li);
 })
+gallery.appendChild(fragment);
