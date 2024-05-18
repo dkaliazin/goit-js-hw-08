@@ -1,7 +1,26 @@
 .gallery {
   display: flex;
+  gap: 24px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 1 032px;
 }
 .gallery-item {
+  box-sizing: border-box;
+  width: 320px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
 }
 .gallery-image {
+  width: 320px;
+  height: 200px;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.gallery-link {
+  height: 200px;
+  width: calc((100% - 24px) / 3);
 }
