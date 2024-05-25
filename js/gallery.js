@@ -81,3 +81,15 @@ images.forEach(image => {
   fragment.appendChild(li);
 })
 gallery.appendChild(fragment);
+gallery.addEventListener('click', function (event) {
+   const target = event.target;
+  if (target.classList.contains('gallery-image')) {
+    event.preventDefault();
+    const largeImageURL = target.getAttribute('data-source');
+    console.log(largeImageURL);
+    const modalWindow = basicLightbox.create(`
+      <img src="${largeImageURL}">
+    `);
+    modalWindow.show();
+  }
+});
